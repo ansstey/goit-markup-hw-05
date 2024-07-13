@@ -77,7 +77,9 @@ p {
   padding-top: 120px;
   padding-bottom: 120px;
 }
-
+input {
+	font-family: inherit;
+}
 
 /* Header */
 .page-header {
@@ -520,4 +522,119 @@ p {
 .hero-button:hover, 
 .hero-button:focus {
     background-color: var(--pressed-state);
+}
+
+
+/* Modal-overlay and modal-form*/
+
+.modal-overlay {
+  background-color: rgba(var(--modal-overlay), 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-overlay.is-open {
+  opacity:1;
+  pointer-events: auto;
+}
+
+
+.modal {
+  background-color: var(--modal-background);
+  border-radius: 4px;
+  padding: 24px;
+  box-shadow: 0 2px 4p rgba(0 0 0 0.2);
+  max-width: 408px;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.button-close {
+  margin-left: 360px;
+  border: 1px solid #0000001A;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;  
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+
+.modal-text {
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0.02em;
+text-align: center;
+
+}
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--subtle-text);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  text-align: left;
+
+}
+
+.accept, .form-accept {
+  margin-top: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid var(--subtle-text);
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus{
+  color: var(--pressed-state);
+  border-color: var(--pressed-state);
+}
+
+.modal-text {
+  margin-bottom: 16px;
+}
+
+.button-submit {
+  display: block;
+  padding: 16px 32px;
+  background-color: var(--primary-band);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 24px;
+  margin-left: 95px;
+  margin-right: 96px;
+}
+
+.button-close:hover,
+.button-submit:hover {
+  background-color: var(--pressed-state);
+}
+
+.modal-link {
+  color: var(--primary-band);
+  text-decoration: none;
+}
+
+.modal-link:hover {
+  text-decoration: underline;
 }
