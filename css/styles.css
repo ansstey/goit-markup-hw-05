@@ -712,7 +712,7 @@ input {
 }
 
 .form-input:focus + .form-icon use {
-  fill: #4D5AE5; 
+  fill: var(--primary-band); 
 }
 
 .form-comment {
@@ -744,9 +744,18 @@ input {
 }
 
 .form-label-accept {
-  font-size: 12px; 
- 
+  font-size: 12px;
+  line-height: 1.17; 
+  letter-spacing: 0.04em;
+  color: var(--subtle-text);
 }
+
+.check-input:checked + span {
+  background-color: var(--pressed-state);
+  fill: var(--light);
+  border: none;
+}
+
 
 .modal-check {
   width: 16px;
